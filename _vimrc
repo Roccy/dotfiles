@@ -4,9 +4,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " get out of horrible vi-compatible mode
 set nocompatible 
-" we are using a dark background
 set background=dark 
-colorscheme solarized
 
 " disable everything until we've loaded the bundles
 filetype off 
@@ -181,6 +179,7 @@ if python_version >= 205
 endif
 
 " I find buffer to be quite convenient, but tabs or splits are also an option
+" let g:jedi#auto_initialization = 0
 let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#use_splits_not_buffers = 1
 
