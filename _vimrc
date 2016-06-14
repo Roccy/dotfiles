@@ -41,6 +41,7 @@ Bundle 'tpope/vim-fugitive'
 " Snipmate and requirements for TextMate snippets
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-obsession'
 Bundle 'Jinja'
 Bundle 'thiderman/vim-supervisor'
 Bundle 'evanmiller/nginx-vim-syntax'
@@ -179,7 +180,7 @@ if python_version >= 205
 endif
 
 " I find buffer to be quite convenient, but tabs or splits are also an option
-" let g:jedi#auto_initialization = 0
+let g:jedi#auto_initialization = 0
 let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#use_splits_not_buffers = 1
 
@@ -456,7 +457,8 @@ inoremap <F6> <C-R>=expand("%:t:r")<CR>
 inoremap } }<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
 inoremap ] ]<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
 inoremap ) )<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
-
+" Remove trailing whilespace
+nnoremap <silent> <F4> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Autocommands 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

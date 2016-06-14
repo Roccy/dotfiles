@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python3"
 source /usr/local/bin/virtualenvwrapper.sh
-plugins=(git last-working-dir virtualenvwrapper)
+plugins=(git virtualenvwrapper)
 
 # User configuration
 
@@ -104,6 +104,7 @@ fi
 
 # Convenient aliasses
 alias grep='grep --color=auto'
+alias hibernate='dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Hibernate'
 
 # History size
 HISTSIZE=50000
@@ -111,3 +112,8 @@ SAVEHIST=50000
 
 export PROJECT_HOME="$HOME/Projects"
 export WORKON_HOME="$HOME/.virtualenvs"
+
+# Java JDK 7
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export PATH=$PATH:/usr/lib/jvm/java-7-openjdk-amd64/bin
+
