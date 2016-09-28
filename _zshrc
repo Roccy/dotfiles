@@ -104,8 +104,7 @@ fi
 
 # Convenient aliasses
 alias grep='grep --color=auto'
-alias hibernate='dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Hibernate'
-
+alias tmux='/usr/local/bin/tmux'
 # History size
 HISTSIZE=50000
 SAVEHIST=50000

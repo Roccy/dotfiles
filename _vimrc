@@ -1,10 +1,9 @@
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Must Have
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " get out of horrible vi-compatible mode
 set nocompatible 
-set background=dark 
+set background=dark
 
 " disable everything until we've loaded the bundles
 filetype off 
