@@ -1,11 +1,16 @@
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+export TERM=xterm-256color
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+export ZSH=/home/roccy/.oh-my-zsh
+
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="agnoster"
+export DEFAULT_USER="roccy"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -49,16 +54,13 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python3"
-source /usr/local/bin/virtualenvwrapper.sh
-plugins=(git virtualenvwrapper)
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/sbin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/local/sbin:/usr/local/bin:/home/roccy/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
-
-source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -74,7 +76,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+ export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -85,34 +87,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-#-----------------------------------------------------------------------------
-#
-# Added By Me
-setopt extendedglob
-zmodload -a colors
-zmodload -a autocomplete
-zmodload -a complist
-
-# Enable Jedi in Python interpreter
-export PYTHONSTARTUP="$HOME/.pythonrc.py"
-export PIP_DISABLE_PIP_VERSION_CHECK=1
-
-# Set correct colors for xterm
-if [ "$TERM" = "xterm" ]; then
-    export TERM=xterm-256color
-fi
-
-# Convenient aliasses
-alias grep='grep --color=auto'
-alias tmux='/usr/local/bin/tmux'
-# History size
-HISTSIZE=50000
-SAVEHIST=50000
-
-export PROJECT_HOME="$HOME/Projects"
-export WORKON_HOME="$HOME/.virtualenvs"
-
-# Java JDK 7
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
-export PATH=$PATH:/usr/lib/jvm/java-7-openjdk-amd64/bin
-
+export WORKON_HOME=~/.virtualenv
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source /usr/local/bin/virtualenvwrapper.sh
